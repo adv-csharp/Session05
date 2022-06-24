@@ -78,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\UCBase.resx">
+      <DependentUpon>UCBase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UCProductList.resx">
       <DependentUpon>UCProductList.cs</DependentUpon>
     </EmbeddedResource>

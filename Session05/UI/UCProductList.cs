@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Session05.UI
 {
-    public partial class UCProductList : UserControl
+    public partial class UCProductList : UCBase
     {
         public UCProductList()
         {
