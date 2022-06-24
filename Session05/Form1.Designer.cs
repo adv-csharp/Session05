@@ -35,13 +35,13 @@
             this.لیستمحصولاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ایجادToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.راهنماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnProsuctList = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -51,7 +51,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnProsuctList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
@@ -103,14 +103,15 @@
             this.راهنماToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.راهنماToolStripMenuItem.Text = "راهنما";
             // 
-            // button1
+            // btnProsuctList
             // 
-            this.button1.Location = new System.Drawing.Point(16, 17);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "لیست محصولات";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnProsuctList.Location = new System.Drawing.Point(16, 17);
+            this.btnProsuctList.Name = "btnProsuctList";
+            this.btnProsuctList.Size = new System.Drawing.Size(172, 23);
+            this.btnProsuctList.TabIndex = 0;
+            this.btnProsuctList.Text = "لیست محصولات";
+            this.btnProsuctList.UseVisualStyleBackColor = true;
+            this.btnProsuctList.Click += new System.EventHandler(this.btnProsuctList_Click);
             // 
             // button2
             // 
@@ -151,21 +152,21 @@
             this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
-            // panel2
+            // panelMain
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(200, 24);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(873, 617);
-            this.panel2.TabIndex = 3;
+            this.panelMain.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(200, 24);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(873, 617);
+            this.panelMain.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 663);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -190,7 +191,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnProsuctList;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem پروندهToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem محصولاتToolStripMenuItem;
@@ -201,7 +202,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panelMain;
     }
 }
 

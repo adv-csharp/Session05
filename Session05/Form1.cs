@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Session05.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,15 @@ namespace Session05
         private void toolStripStatusLabel2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProsuctList_Click(object sender, EventArgs e)
+        {
+            var uc = new UCProductList();
+            uc.Width = panelMain.Width;
+            uc.Height = panelMain.Height;
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(uc);
         }
     }
 }
