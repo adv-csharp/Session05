@@ -55,21 +55,22 @@ namespace Session05.UI
 
                 //Anaynemouse Object
                 var catId = Convert.ToInt32(dropDownCategories.SelectedValue);
-                var query = db.Products.Select(p => new
+                var query = db.Products.Include(x => x.Category).Select(p => new
                 {
                     ProductID = p.ProductID,
                     ProductName = p.ProductName,
                     UnitPrice = p.UnitPrice,
                     UnitsInStock = p.UnitsInStock,
                     Discontinued = p.Discontinued,
-                    CategoryID = p.CategoryID
+                    CategoryID = p.CategoryID,
+                    CategoryName = p.Category.CategoryName,
                 });                                  
                 if(catId > -1)
                 {
                     query = query.Where(p => p.CategoryID == catId);
                 }
 
-                var list = query.OrderBy(x => x.ProductID).ToList();                
+                var list = query.OrderByDescending(x => x.ProductID).ToList();                
                 dataGridView1.DataSource = list;
             }
         }
@@ -77,6 +78,39 @@ namespace Session05.UI
         private void dropDownCategories_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadData();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ProductId"].Value);
+            if(dataGridView1.CurrentCell.OwningColumn.Name == "Edit")
+            {
+                (Parent.Parent as Form1).NewProduct(id);
+            }
+            if (dataGridView1.CurrentCell.OwningColumn.Name == "Delete")
+            {
+                /**
+                 * DELETE
+                 * using (var db ...)
+                 * p = db.find(id)
+                 * db.products.remove(p)
+                 * db.saveChages()
+                 */
+
+                if(MessageBox.Show("مطمئن هستید؟", "حذف", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+
+                using (var db = new NorthwindEntities())
+                {
+                    var p = db.Products.Find(id);
+                    db.Products.Remove(p);
+                    db.SaveChanges();
+                }
+
+                loadData();
+            }
         }
     }
 }

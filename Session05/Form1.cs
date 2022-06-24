@@ -30,7 +30,21 @@ namespace Session05
 
         private void btnProsuctList_Click(object sender, EventArgs e)
         {
-            var uc = new UCProductList();
+            showUC(new UCProductList());
+        }
+
+        private void btnNewProduct_Click(object sender, EventArgs e)
+        {
+            NewProduct();
+        }
+
+        public void NewProduct(int? id = null)
+        {
+            showUC(new UCProduct(id));
+        }
+
+        private void showUC(UCBase uc)
+        {
             uc.Width = panelMain.Width;
             uc.Height = panelMain.Height;
             panelMain.Controls.Clear();

@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNewProduct = new System.Windows.Forms.Button();
+            this.btnProsuctList = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.پروندهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.محصولاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.لیستمحصولاتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ایجادToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.راهنماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnProsuctList = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
@@ -50,13 +50,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnNewProduct);
             this.panel1.Controls.Add(this.btnProsuctList);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 639);
             this.panel1.TabIndex = 0;
+            // 
+            // btnNewProduct
+            // 
+            this.btnNewProduct.Location = new System.Drawing.Point(16, 46);
+            this.btnNewProduct.Name = "btnNewProduct";
+            this.btnNewProduct.Size = new System.Drawing.Size(172, 23);
+            this.btnNewProduct.TabIndex = 1;
+            this.btnNewProduct.Text = "محصول جدید";
+            this.btnNewProduct.UseVisualStyleBackColor = true;
+            this.btnNewProduct.Click += new System.EventHandler(this.btnNewProduct_Click);
+            // 
+            // btnProsuctList
+            // 
+            this.btnProsuctList.Location = new System.Drawing.Point(16, 17);
+            this.btnProsuctList.Name = "btnProsuctList";
+            this.btnProsuctList.Size = new System.Drawing.Size(172, 23);
+            this.btnProsuctList.TabIndex = 0;
+            this.btnProsuctList.Text = "لیست محصولات";
+            this.btnProsuctList.UseVisualStyleBackColor = true;
+            this.btnProsuctList.Click += new System.EventHandler(this.btnProsuctList_Click);
             // 
             // menuStrip1
             // 
@@ -88,13 +108,13 @@
             // لیستمحصولاتToolStripMenuItem
             // 
             this.لیستمحصولاتToolStripMenuItem.Name = "لیستمحصولاتToolStripMenuItem";
-            this.لیستمحصولاتToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.لیستمحصولاتToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.لیستمحصولاتToolStripMenuItem.Text = "لیست محصولات";
             // 
             // ایجادToolStripMenuItem
             // 
             this.ایجادToolStripMenuItem.Name = "ایجادToolStripMenuItem";
-            this.ایجادToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ایجادToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.ایجادToolStripMenuItem.Text = "ایجاد";
             // 
             // راهنماToolStripMenuItem
@@ -102,25 +122,6 @@
             this.راهنماToolStripMenuItem.Name = "راهنماToolStripMenuItem";
             this.راهنماToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
             this.راهنماToolStripMenuItem.Text = "راهنما";
-            // 
-            // btnProsuctList
-            // 
-            this.btnProsuctList.Location = new System.Drawing.Point(16, 17);
-            this.btnProsuctList.Name = "btnProsuctList";
-            this.btnProsuctList.Size = new System.Drawing.Size(172, 23);
-            this.btnProsuctList.TabIndex = 0;
-            this.btnProsuctList.Text = "لیست محصولات";
-            this.btnProsuctList.UseVisualStyleBackColor = true;
-            this.btnProsuctList.Click += new System.EventHandler(this.btnProsuctList_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(16, 46);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(172, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "محصول جدید";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // statusStrip1
             // 
@@ -190,8 +191,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnProsuctList;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem پروندهToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem محصولاتToolStripMenuItem;
@@ -203,6 +202,8 @@
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.Panel panelMain;
+        public System.Windows.Forms.Button btnNewProduct;
+        public System.Windows.Forms.Button btnProsuctList;
     }
 }
 
