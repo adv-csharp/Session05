@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Session05
+namespace Session05.UI
 {
-    public partial class Form1 : Form
+    public partial class UCBase : UserControl
     {
-        public Form1()
+        public UCBase()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
